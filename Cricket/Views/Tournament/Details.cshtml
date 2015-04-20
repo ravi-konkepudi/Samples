@@ -1,0 +1,36 @@
+﻿@model Cricket.Models.Tournament
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Tournament</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TournamentName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TournamentName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StartDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EndDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TournamentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

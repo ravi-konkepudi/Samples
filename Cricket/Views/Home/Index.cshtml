@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "IPL 2015";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                Today's Match is between <span style="font-weight:bold; color:darkblue;" class="" >@ViewBag.MatchDetails</span>
+            </p>
+        </div>
+    </section>
+}
+<h3>Your Betting History</h3>
+<ol class="round">
+    <li class="one">
+        
+    </li>
+
+    <li class="two">
+        
+    </li>
+
+    <li class="three">
+        
+    </li>
+</ol>
+    @if(ViewBag.CanPlaceNewBet)
+    {
+        <h3>Place New bet</h3>        
+        <input type="text" id="betAmount" />
+        <input type="submit" id="btnNewBet" name="Place New Bet" />
+    }
+    else
+    {
+        <h3>Sorry!! Betting closed for this match</h3>
+        <span style="font-weight:bold; color:darkblue;" class="" >@ViewBag.MatchDetails</span>
+    }
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+    });
+
+    $('#btnNewBet').click(function (e) {
+        var bet = $('#betAmount').val();
+        
+        $.post("Home/PlaceNewBet", { betAmount: bet });
+    });
+</script>

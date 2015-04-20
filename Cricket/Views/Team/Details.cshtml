@@ -1,0 +1,29 @@
+﻿@model Cricket.Models.Team
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Team</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tournament.TournamentName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tournament.TournamentName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TeamName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TeamName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TeamId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

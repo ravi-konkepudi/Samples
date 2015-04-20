@@ -1,0 +1,50 @@
+﻿@model Cricket.Models.Schedule
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Schedule</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MatchDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MatchDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MatchTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MatchTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ground)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ground)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Result)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Result)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ScheduleId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
